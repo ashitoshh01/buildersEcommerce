@@ -74,7 +74,9 @@ export function Navbar() {
 
                 {/* Actions */}
                 <div className="flex items-center space-x-3">
-                    <RoleSwitcher />
+                    <div className="hidden md:block">
+                        <RoleSwitcher />
+                    </div>
 
                     <div className="hidden md:block h-6 w-px bg-slate-100 mx-2" />
 
@@ -105,15 +107,18 @@ export function Navbar() {
                             </SheetTrigger>
                             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                                 <div className="flex flex-col gap-8 mt-8">
-                                    <div className="flex items-center gap-3 pb-8 border-b border-slate-100">
-                                        <Avatar className="h-12 w-12 border-2 border-white shadow-sm">
-                                            <AvatarImage src={currentUser?.avatar} alt={currentUser?.name} />
-                                            <AvatarFallback>{currentUser?.name.charAt(0)}</AvatarFallback>
-                                        </Avatar>
-                                        <div>
-                                            <h3 className="font-bold text-slate-900">{currentUser?.name}</h3>
-                                            <p className="text-sm text-slate-500 capitalize">{activeRole} Account</p>
+                                    <div className="flex flex-col gap-4 pb-8 border-b border-slate-100">
+                                        <div className="flex items-center gap-3">
+                                            <Avatar className="h-12 w-12 border-2 border-white shadow-sm">
+                                                <AvatarImage src={currentUser?.avatar} alt={currentUser?.name} />
+                                                <AvatarFallback>{currentUser?.name.charAt(0)}</AvatarFallback>
+                                            </Avatar>
+                                            <div>
+                                                <h3 className="font-bold text-slate-900">{currentUser?.name}</h3>
+                                                <p className="text-sm text-slate-500 capitalize">{activeRole} Account</p>
+                                            </div>
                                         </div>
+                                        <RoleSwitcher />
                                     </div>
 
                                     <nav className="flex flex-col space-y-4">
