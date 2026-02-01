@@ -47,9 +47,9 @@ export function Navbar() {
                 {/* Logo */}
                 <div className="mr-8 flex items-center gap-2">
                     <div className="h-9 w-9 rounded-xl bg-orange-600 flex items-center justify-center shadow-lg shadow-orange-200">
-                        <span className="text-white font-playfair font-bold text-xl">S</span>
+                        <span className="text-white font-playfair font-bold text-xl">I</span>
                     </div>
-                    <span className="text-xl font-bold tracking-tight text-slate-900 font-display">Structura</span>
+                    <span className="text-xl font-bold tracking-tight text-slate-900 font-display">Inframart</span>
                 </div>
 
                 {/* Desktop Navigation */}

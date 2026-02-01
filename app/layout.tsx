@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Structura | Premium Construction Marketplace",
+  title: "Inframart | Premium Construction Marketplace",
   description: "Source materials, find professionals, and manage construction projects.",
 };
 
