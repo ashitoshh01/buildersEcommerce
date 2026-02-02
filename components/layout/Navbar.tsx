@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import Image from 'next/image';
 
 export function Navbar() {
     const { activeRole, currentUser, rfqs, walletBalance } = useAppStore();
@@ -46,9 +47,13 @@ export function Navbar() {
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center">
                 {/* Logo */}
                 <div className="mr-8 flex items-center gap-2">
-                    <div className="h-9 w-9 rounded-xl bg-orange-600 flex items-center justify-center shadow-lg shadow-orange-200">
-                        <span className="text-white font-playfair font-bold text-xl">I</span>
-                    </div>
+                    <Image
+                        src="/logo.png"
+                        alt="Inframart Logo"
+                        width={40}
+                        height={40}
+                        className="h-10 w-auto object-contain"
+                    />
                     <span className="text-xl font-bold tracking-tight text-slate-900 font-display">Inframart</span>
                 </div>
 
